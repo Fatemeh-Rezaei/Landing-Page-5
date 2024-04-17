@@ -1,4 +1,7 @@
 const navbar = document.querySelector("#nav");
+const btnClose = document.querySelector("#close-btn")
+const navBtn = document.querySelector("#nav-btn")
+const sidebar = document.querySelector("#sidebar")
 
 // add fixed class to navbar
 window.addEventListener("scroll", function () {
@@ -8,3 +11,12 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("navbar-fixed");
   }
 });
+
+// add sidebar menu
+navBtn.addEventListener("click" , function () {
+    sidebar.classList.add("show-sidebar")
+})
+
+btnClose.addEventListener("click" , function () {
+    sidebar.classList.remove("show-sidebar")
+})

@@ -241,3 +241,74 @@ Navbar
     align-items: center;
   }
 }
+
+/*
+=============== 
+Sidebar
+===============
+*/
+
+.sidebar {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: var(--clr-grey-3);
+    z-index: 4;
+    display: grid;
+    justify-content: center;
+    place-content: center;
+    transition: var(--transition);
+    transform: translateX(100%);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    color: #bb2525;
+    cursor: pointer;
+}
+.sidebar-links{
+    text-align: center;
+}
+
+.sidebar-links li a{
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--clr-grey-2);
+    font-size: 1.5rem;
+    transition: var(--max-width);
+}
+
+.sidebar-links li a:hover{
+    color: var(--clr-primary-4);
+}
+
+.social-icons{
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    justify-items: center;
+    align-items: center;
+    column-gap: 2rem;
+    margin-top: 3rem;
+}
+
+.social-icons li a {
+    color: var(--clr-grey-1);
+    font-size: 1.7rem;
+    row-gap: 1px;
+    transition: var(--transition);
+}
+
+.social-icons li a:hover {
+    color: var(--clr-primary-4);
+}
+
+.show-sidebar {
+    transform: translateX(0);
+}
