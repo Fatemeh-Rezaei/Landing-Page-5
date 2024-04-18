@@ -615,12 +615,12 @@ Connection
   justify-items: center;
   padding: 15rem 0 10rem 0;
   margin: 5rem 0;
-  clip-path: polygon(50% 0,
-      50% 0,
+  clip-path: polygon(50% 5%,
+      50% 5%,
       100% 20%,
       100% 80%,
-      50% 100%,
-      50% 100%,
+      50% 95%,
+      50% 95%,
       0% 80%,
       0% 20%);
 }
@@ -736,4 +736,73 @@ Skills
     grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
   }
+}
+
+/*
+=============== 
+Timeline
+===============
+*/
+
+.timeline-center {
+  width: 80vw;
+  max-width: 40rem;
+}
+
+.timeline-item {
+  padding: 4rem 2rem;
+  position: relative;
+  border-radius: var(--radius);
+}
+
+.timeline-item:nth-child(2n + 1) {
+  border-right: 2px dashed var(--clr-primary-2);
+  border-bottom: 2px dashed var(--clr-primary-2);
+  border-top: 2px dashed var(--clr-primary-2);
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: 2rem;
+  padding-left: 0;
+}
+
+.timeline-item:nth-child(2n) {
+  border-left: 2px dashed var(--clr-primary-2);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  margin-right: 2rem;
+  padding-right: 0;
+}
+
+.timeline-item:first-child {
+  border-top: none;
+  border-top-right-radius: 0;
+}
+
+.timeline-item:last-child {
+  border-bottom-left-radius: 0;
+}
+
+.number {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  background-color: var(--clr-primary-2);
+  color: var(--clr-white);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transform: translate(50%, -50%);
+}
+
+.timeline-item:nth-child(2n + 1) .number {
+  right: 0;
+}
+
+.timeline-item:nth-child(2n) .number {
+  left: 0;
+  transform: translate(-50%, -50%);
 }
