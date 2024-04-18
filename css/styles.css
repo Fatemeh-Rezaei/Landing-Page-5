@@ -394,3 +394,40 @@ Header
     border-radius: var(--radius);
   }
 }
+
+/*
+=============== 
+About
+===============
+*/
+
+.about-center {
+  display: grid;
+  place-items: center;
+}
+
+.about-img {
+  position: relative;
+  justify-self: center;
+}
+
+.about-photo {
+  max-width: 25rem;
+  max-height: 30rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.about-info {
+  margin-top: 2rem;
+}
+
+.about-title .underline {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .about-center {
+    grid-template-columns: 1fr 1fr;
+  }
+}
