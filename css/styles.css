@@ -571,12 +571,15 @@ Projects
   .project-1 {
     grid-area: project-1;
   }
+
   .project-2 {
     grid-area: project-2;
   }
+
   .project-3 {
     grid-area: project-3;
   }
+
   .project-4 {
     grid-area: project-4;
   }
@@ -612,16 +615,14 @@ Connection
   justify-items: center;
   padding: 15rem 0 10rem 0;
   margin: 5rem 0;
-  clip-path: polygon(
-    50% 0,
-    50% 0,
-    100% 20%,
-    100% 80%,
-    50% 100%,
-    50% 100%,
-    0% 80%,
-    0% 20%
-  );
+  clip-path: polygon(50% 0,
+      50% 0,
+      100% 20%,
+      100% 80%,
+      50% 100%,
+      50% 100%,
+      0% 80%,
+      0% 20%);
 }
 
 .connect::after {
@@ -650,17 +651,89 @@ Connection
   background-color: var(--clr-primary-5);
   padding: 3rem 5rem 12rem 5rem;
   text-align: center;
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 75%,
-    75% 75%,
-    75% 100%,
-    50% 75%,
-    0% 75%
-  );
+  clip-path: polygon(0% 0%,
+      100% 0%,
+      100% 75%,
+      75% 75%,
+      75% 100%,
+      50% 75%,
+      0% 75%);
 }
 
 .video-text {
   max-width: 30rem;
+}
+
+/*
+=============== 
+Skills
+===============
+*/
+
+.skills {
+  background-color: var(--clr-primary-4);
+}
+
+.skill {
+  display: grid;
+  margin-bottom: 2rem;
+}
+
+.skill p {
+  color: var(--clr-primary-1);
+}
+
+.skill-container {
+  width: 100%;
+  height: 1rem;
+  background-color: var(--clr-white);
+  border-radius: var(--radius);
+  position: relative;
+}
+
+.skill-value {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--clr-primary-2);
+  border-radius: var(--radius);
+}
+
+.value-50 {
+  width: 50%;
+}
+
+.value-70 {
+  width: 70%;
+}
+
+.value-80 {
+  width: 80%;
+}
+
+.skill-text {
+  position: absolute;
+  top: -2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-text-50 {
+  left: 50%;
+}
+
+.skill-text-70 {
+  left: 70%;
+}
+
+.skill-text-80 {
+  left: 80%;
+}
+
+@media screen and (min-width: 768px) {
+  .skills-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
 }
