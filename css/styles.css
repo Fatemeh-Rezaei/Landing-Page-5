@@ -615,14 +615,16 @@ Connection
   justify-items: center;
   padding: 15rem 0 10rem 0;
   margin: 5rem 0;
-  clip-path: polygon(50% 5%,
-      50% 5%,
-      100% 20%,
-      100% 80%,
-      50% 95%,
-      50% 95%,
-      0% 80%,
-      0% 20%);
+  clip-path: polygon(
+    50% 5%,
+    50% 5%,
+    100% 20%,
+    100% 80%,
+    50% 95%,
+    50% 95%,
+    0% 80%,
+    0% 20%
+  );
 }
 
 .connect::after {
@@ -651,13 +653,15 @@ Connection
   background-color: var(--clr-primary-5);
   padding: 3rem 5rem 12rem 5rem;
   text-align: center;
-  clip-path: polygon(0% 0%,
-      100% 0%,
-      100% 75%,
-      75% 75%,
-      75% 100%,
-      50% 75%,
-      0% 75%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
 }
 
 .video-text {
@@ -896,4 +900,30 @@ Articles
   .blog-center {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+/*
+=============== 
+Footer
+===============
+*/
+
+.footer {
+  background: #222;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.footer .social-icons {
+  margin-bottom: 2rem;
+}
+
+.footer .social-icon {
+  cursor: pointer;
+  color: var(--clr-primary-2);
+}
+
+.footer .social-icon:hover {
+  color: var(--clr-primary-5);
 }
